@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
 
-test('basic page load', async ({ page }) => {
-    await page.goto('https://playwright.dev/');
-    await expect(page).toHaveTitle(/Playwright/);
+test("Verify the title", async ({ page }) => {
+    await page.goto("https://app.vwo.com");
+    await expect(page).toHaveTitle("Login - Wingify");
+    // page = fixture (injected by Playwright)
+
 });
