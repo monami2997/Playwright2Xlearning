@@ -9,4 +9,5 @@ test('Task automate', async({page})=>{
     await page.locator('label').filter({ hasText: 'Remember me' }).click();
     await page.locator('.login-btn').click();
     await expect(page).toHaveURL("https://app.thetestingacademy.com/playwright/multiple_element_filter?email=monami%40gmail.com&password=monami&remember=yes#login-success");
+    page.pause();
 })
